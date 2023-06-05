@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>nations of rise</title>
+    <link href="stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="viewBox" width="1280" height="720"></canvas>
+
+    <div id="cityManager" class="tabContent"></div>
+    <div id="resourceManager" class="tabContent"></div>
+    <div id="improvementManager" class="tabContent"></div>
+    <div id="unitManager" class="tabContent"></div>
+    <div id="settings" class="tabContent">
+        <button class="dataButton">Save data</button>
+        <button class="dataButton">Reset data</button>
+        <button class="dataButton">Import data</button>
+        <button class="dataButton">Export data</button>
+    </div>
+
+    <div class="tabBar">
+        <button id="defaultOpen" class="tabLink" onclick="openTab(event, 'settings')">Settings</button>
+    </div>
+</body>
+
+<script src="data/playerData.js"></script>
+
+<script src="scripts/init.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/graphics.js"></script>
+<script src="scripts/util.js"></script>
+<script src="scripts/page.js"></script>
+
+</html>
