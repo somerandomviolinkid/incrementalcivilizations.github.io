@@ -9,10 +9,40 @@
 <body>
     <canvas id="viewBox" width="1280" height="720"></canvas>
 
-    <div id="cityManager" class="tabContent"></div>
-    <div id="resourceManager" class="tabContent"></div>
+    <div id="cityManager" class="tabContent">
+        <div id="cityInformation">
+            <p id="cityTitle"></p>
+            <p id="cityPopulation"></p>
+        </div>
+        <hr>
+        <div id="zoningStats">
+            <div id="residential" class="zoningDiv">
+                <p id="residentialZoneCount" class="zoningP"></p>
+                <button id="buildResidentialZones" class="zoningButton">Build 1 residential district</button>
+            </div>
+            <div id="commercial" class="zoningDiv">
+                <p id="commercialZoneCount" class="zoningP"></p>
+                <button id="buildCommercialZones" class="zoningButton">Build 1 commercial district</button>
+            </div>
+            <div id="industrial" class="zoningDiv">
+                <p id="industrialZoneCount" class="zoningP"></p>
+                <button id="buildIndustrialZones" class="zoningButton">Build 1 industrial district</button>
+            </div>
+        </div>
+        <button>Build roads</button>
+    </div>
+
+    <div id="resourceManager" class="tabContent">
+        <div id="resourceInformation">
+            <p id="resourceTitle"></p>
+        </div>
+        <button id="buildImprovement"></button>
+    </div>
+
     <div id="improvementManager" class="tabContent"></div>
+
     <div id="unitManager" class="tabContent"></div>
+
     <div id="settings" class="tabContent">
         <button class="dataButton">Save data</button>
         <button class="dataButton">Reset data</button>
@@ -25,12 +55,14 @@
     </div>
 </body>
 
-<script src="data/playerData.js"></script>
-
 <script src="scripts/init.js"></script>
-<script src="scripts/main.js"></script>
-<script src="scripts/graphics.js"></script>
+
+<script src="data/playerData.js"></script>
+<script src="data/mapData.js"></script>
+
 <script src="scripts/util.js"></script>
 <script src="scripts/page.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/graphics.js"></script>
 
 </html>

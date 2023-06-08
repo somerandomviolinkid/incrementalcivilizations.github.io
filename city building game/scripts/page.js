@@ -17,3 +17,21 @@ function openTab(evt, tabName) {
 }
 
 document.getElementById("defaultOpen").click();
+
+function openCityMenu(cityID) {
+    let currentCity = playerData.cities[cityID];
+    let currentCityInformation = currentCity.information;
+    let currentCityZoning = currentCity.zoning;
+    let currentCityIndustries = currentCity.industries;
+
+    document.getElementById("cityTitle").innerHTML = currentCityInformation.title;
+    document.getElementById("cityPopulation").innerHTML = "Population: " + currentCityInformation.population;
+
+    document.getElementById("residentialZoneCount").innerHTML = "Residential: " + currentCityZoning.residential;
+    document.getElementById("commercialZoneCount").innerHTML = "Commericial: " + currentCityZoning.commerical;
+    document.getElementById("industrialZoneCount").innerHTML = "Industrial: " + currentCityZoning.industrial;
+}
+
+function openResourceMenu(resourceID) {
+    document.getElementById("resourceTitle").innerHTML = mapData.resources[resourceID].type;
+}

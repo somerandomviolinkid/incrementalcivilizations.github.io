@@ -1,3 +1,7 @@
+function randomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 let canvas = document.getElementById('viewBox');
 let ctx = canvas.getContext('2d');
 
